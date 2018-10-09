@@ -98,3 +98,32 @@ footer {
     transform: translateY(0px);
   }
 }
+
+.fade-enter {
+  opacity: 0.01;
+  overflow: hidden;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  visibility: hidden;
+  display: none;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-wrapper {
+  max-width: 90%;
+  margin: 1rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}

@@ -3,7 +3,7 @@ import Page from "./Page";
 
 const HomePage = () => {
   return (
-    <Page title="Home Page" className="home">
+    <Page title="Home Page 🚀" className="home">
       <section>
         <Content />
         <PopularProducts />

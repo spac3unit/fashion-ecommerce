@@ -24,7 +24,7 @@ class ProductPage extends Component {
   render() {
     const { currentItem } = this.state;
     return (
-      <Page title="Product Page" className="product">
+      <Page title="Product Page 👟" className="product">
         <Product {...currentItem} />
       </Page>
     );

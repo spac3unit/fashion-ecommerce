@@ -6,7 +6,7 @@ class ShopPage extends Component {
   render() {
     const { items } = this.props;
     return (
-      <Page title="Shop Page" className="shop" data-namespace="shop">
+      <Page title="Shop Page 🛒" className="shop" data-namespace="shop">
         <div className="shop__container">
           <aside className="shop__sidebar">
             <ShopSidebar />
