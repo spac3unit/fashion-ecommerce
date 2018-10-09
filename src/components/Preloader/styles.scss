@@ -1,0 +1,54 @@
+@keyframes loader-in {
+  0% {
+    right: 100%;
+  }
+  50% {
+    right: 0%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@keyframes loader-out {
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.loader {
+  width: 100%;
+  height: 1px;
+  position: relative;
+  background-color: #b6b6b6;
+}
+.loader .loader-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  animation: loader-in 2.5s infinite, loader-out 2.5s infinite;
+  background-color: black;
+}
+
+.loader.inverted {
+  width: 100%;
+  height: 10px;
+}
+
+.primary .loader .loader-bar,
+.order-confirmation-continue-shipping .loader .loader-bar {
+  background-color: white;
+}
+
+.loader-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  width: 450px;
+  padding: 40px;
+}

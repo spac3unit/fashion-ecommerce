@@ -1,0 +1,14 @@
+.products {
+  $self: &;
+  @include grid-container;
+
+  &__list {
+  }
+
+  &__item {
+    @include grid-column(4, $products-grid);
+    @include grid-media($products-grid) {
+      @include grid-column(3);
+    }
+  }
+}

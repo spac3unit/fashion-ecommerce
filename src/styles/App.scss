@@ -1,0 +1,100 @@
+// Normalize
+@import './vendors/normalize/variables';
+@import './vendors/normalize/vertical-rhythm';
+@import './vendors/normalize/normalize-mixin';
+@include normalize();
+// Bourbon, Neat, Compass
+@import './vendors/bourbon';
+@import './vendors/neat';
+@import './vendors/compass/_compass.scss';
+// User's mixins
+@import './mixins';
+
+// Grid settings for different pages / layouts
+$custom-grid--thirds: (
+  columns: 3,
+  gutter: 10px
+);
+
+$product-page-grid: (
+  columns: 12,
+  gutter: 10px,
+  media: 1200px
+) !default;
+
+$shop-page-grid: (
+  columns: 12,
+  gutter: 10px,
+  media: 1200px
+) !default;
+$products-grid: (
+  columns: 12,
+  gutter: 10px,
+  media: 1000px
+) !default;
+
+// Styles from components
+@import '../components/Header/styles.scss';
+@import '../components/Navigation/styles.scss';
+@import '../components/Pages/ProductPage.scss';
+@import '../components/Pages/ShopPage.scss';
+@import '../components/Pages/HomePage.scss';
+@import '../components/Products/ProductsGrid.scss';
+@import '../components/Products/ProductsItem.scss';
+// @import '../components/Navigation/ShopSidebar.scss';
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+header {
+  padding: 20px;
+  color: white;
+  background-color: #101010;
+}
+
+footer {
+  color: white;
+  background-color: #101010;
+  padding: 20px;
+}
+
+.custom-grid--thirds {
+  @include grid-container;
+}
+
+.element {
+  @include grid-column(1, $custom-grid--thirds);
+}
+
+.overmenu {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 120px;
+  opacity: 0;
+  transform: translateY(-120px);
+  background: white;
+  transition: all 0.3s ease-in-out;
+  z-index: 20;
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}

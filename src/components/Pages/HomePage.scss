@@ -1,0 +1,19 @@
+// .product {
+//   $self: &;
+//   &__container {
+//     @include grid-container;
+//     max-width: 90%;
+//     margin: 0 auto;
+//   }
+//   &__gallery {
+//     @include grid-column(4, $grid--product-page);
+//     overflow: hidden;
+//     #{$self}__image {
+//       width: 100%;
+//       max-width: 100%;
+//     }
+//   }
+//   &__details {
+//     @include grid-column(8, $grid--product-page);
+//   }
+// }

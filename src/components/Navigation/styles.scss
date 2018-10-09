@@ -1,0 +1,32 @@
+.nav {
+  background: #151515;
+  border-top: 1px solid #292929;
+  border-bottom: 1px solid #292929;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__item {
+    display: inline-block;
+    margin-right: 50px;
+  }
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    font-weight: 600;
+    &:active,
+    &:focus,
+    &:visited {
+      color: #fff;
+    }
+  }
+}
