@@ -9,24 +9,23 @@ class Burger extends Component {
 
   toggleBurger = e => {
     // this.burgerBtn.current.classList.toggle('is-active')
-    document.getElementById("overmenu").classList.toggle("is-active");
+    document.getElementById("burgerMenu").classList.toggle("is-active");
     // e.preventDefault()
     e.stopPropagation();
   };
   render() {
     return (
       <div className="burger__variants">
-        <div>
-          <input
-            type="checkbox"
-            id="toggle-text-on-left"
-            onClick={this.toggleBurger}
-          />
-          <label htmlFor="toggle-text-on-left">
-            <i />
-          </label>
-          <em />
-        </div>
+        <input
+          type="checkbox"
+          id="toggle-text-on-left"
+          onClick={this.toggleBurger}
+        />
+        <label htmlFor="toggle-text-on-left">
+          <i />
+        </label>
+        <em />
+
         {/* <a
           href="#a"
           className="menu-button"

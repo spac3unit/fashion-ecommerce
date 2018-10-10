@@ -1,0 +1,51 @@
+.overlay-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.overlay-menu__overlay {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  will-change: opacity;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.is-open.overlay-menu .overlay-menu__overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay-menu__wrap {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%);
+  will-change: transform;
+  z-index: 101;
+  pointer-events: auto;
+  transition: transform 130ms ease;
+}
+.is-right.overlay-menu .overlay-menu__wrap {
+  right: 0;
+  transform: translateX(100%);
+}
+.is-open.overlay-menu .overlay-menu__wrap {
+  transform: none;
+  pointer-events: auto;
+  transition: transform 330ms ease;
+}

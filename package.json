@@ -5,7 +5,9 @@
   "dependencies": {
     "bourbon": "^5.1.0",
     "bourbon-neat": "^1.9.1",
+    "classnames": "^2.2.6",
     "firebase": "^5.5.3",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",
@@ -13,6 +15,15 @@
     "react-slick": "^0.23.1",
     "react-transition-group": "^2.5.0",
     "styled-components": "^4.0.0-beta.10"
+  },
+  "devDependencies": {
+    "dotenv": "^6.1.0",
+    "husky": "^1.1.1",
+    "kuker-emitters": "^6.7.4",
+    "lint-staged": "^7.3.0",
+    "node-sass": "^4.9.3",
+    "prettier": "^1.14.3",
+    "react-perf-devtool": "^3.1.8"
   },
   "scripts": {
     "start": "BROWSER='none' react-scripts start",
@@ -53,12 +64,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "dotenv": "^6.0.0",
-    "husky": "^1.1.1",
-    "lint-staged": "^7.3.0",
-    "node-sass": "^4.9.3",
-    "prettier": "^1.14.3"
-  }
+  ]
 }

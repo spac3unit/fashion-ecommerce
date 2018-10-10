@@ -1,31 +1,31 @@
 import React, { Component } from "react";
-import Api from "../../modules/firestore-db";
+import API from "../modules/firestore-db";
 import Page from "./Page";
+import Preloader from "../components/Preloader/LinearProgress";
 
 class ProductPage extends Component {
   state = {
-    currentItem: null
+    loading: false,
+    currentItem: null,
+    error: null
   };
 
-  componentWillMount = async () => {
+  componentWillMount = () => {
     const { id } = this.props.match.params;
-    Api.getDocument(id)
-      .then(item =>
-        this.setState({
-          currentItem: {
-            id,
-            ...item
-          }
-        })
-      )
-      .catch(error => console.log("Error getting document:", error));
+    this.setState({ loading: true }, () => {
+      API.getDocument(id)
+        .then(item =>
+          this.setState({ currentItem: { id, ...item }, loading: false })
+        )
+        .catch(error => this.setState({ error, loading: false }));
+    });
   };
 
   render() {
     const { currentItem } = this.state;
     return (
       <Page title="Product Page 👟" className="product">
-        <Product {...currentItem} />
+        {currentItem ? <Product {...currentItem} /> : <Preloader />}
       </Page>
     );
   }

@@ -1,0 +1,73 @@
+@import '../../styles/vendors/burger/_burger.scss';
+
+#toggle-defaults {
+  @include hamburger();
+}
+
+#toggle-custom-size {
+  @include hamburger($width: 50px, $thickness: 1px, $gap: 16px);
+}
+
+#toggle-custom-animation {
+  @include hamburger($anim: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.33s);
+}
+
+#toggle-tint {
+  @include hamburger($color: crimson, $tint_text: true);
+  &:checked {
+    @include hamburger_tint($color: darkgrey, $tint_text: true);
+    &:hover {
+      @include hamburger_tint($color: blue, $tint_text: true);
+    }
+  }
+  &:hover {
+    @include hamburger_tint($color: green, $tint_text: true);
+  }
+}
+
+#toggle-radius {
+  @include hamburger(
+    $width: 40px,
+    $thickness: 6px,
+    $color: coral,
+    $radius: 6px
+  );
+}
+
+#toggle-padding {
+  @include hamburger($width: 24px, $thickness: 2px, $gap: 5px, $padding: 24px);
+  &:hover {
+    @include hamburger_tint(orange);
+  }
+}
+
+#toggle-text-on-left {
+  @include hamburger($width: 25px, $text: left, $style: 'align-right');
+}
+
+#toggle-text-on-right {
+  @include hamburger($text: right, $style: 'align-left');
+}
+
+#toggle-solid-background {
+  @include hamburger(
+    $background: #ff6347,
+    $width: 17px,
+    $thickness: 3px,
+    $gap: 4px,
+    $padding: 12px,
+    $color: white,
+    $radius_background: 50%
+  );
+}
+
+#toggle-noanim {
+  @include hamburger($anim: -1);
+}
+
+#toggle-above-dark-background {
+  @include hamburger($color: white);
+  &:checked {
+    @include hamburger_tint($color: #293134, $tint_text: true);
+  }
+}

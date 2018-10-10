@@ -1,14 +1,14 @@
 import React from "react";
+import Preloader from "../../components/Preloader/LinearProgress";
 import ProductsItem from "./ProductsItem";
-const ProductsGrid = ({ items, className }) => {
-  const products = items.map(item => (
-    <ProductsItem {...item} className={`${className}__item`} />
-  ));
+
+export default ({ items, className }) => {
   return (
-    <div className={className}>
-      <ul className={`${className}__list`}>{products}</ul>
+    <div className="products">
+      <ul className="products__list">
+        {!items && <Preloader />}
+        {items && items.map(item => <ProductsItem {...item} />)}
+      </ul>
     </div>
   );
 };
-
-export default ProductsGrid;

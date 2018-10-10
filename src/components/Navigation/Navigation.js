@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Burger from "../../components/BurgerButton";
+import Burger from "../../components/Burger/BurgerButton";
 
 const Navigation = () => {
   return (
@@ -18,9 +18,9 @@ const Navigation = () => {
             </Link>
           </li>
           <li className="nav__item">
-            <a href="#" className="nav__link">
-              Shoes
-            </a>
+            <Link to="/admin/add-product" className="nav__link">
+              CMS
+            </Link>
           </li>
           <li className="nav__item">
             <a href="#" className="nav__link">

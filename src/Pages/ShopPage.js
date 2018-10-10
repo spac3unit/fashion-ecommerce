@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ShopSidebar from "../Navigation/ShopSidebar";
-import ProductsGrid from "../Products/ProductsGrid";
+import ShopSidebar from "../components/Navigation/ShopSidebar";
+import ProductsGrid from "../components/Products/ProductsGrid";
 import Page from "./Page";
 class ShopPage extends Component {
   render() {
@@ -16,7 +16,7 @@ class ShopPage extends Component {
               <div className="sorter">Sort by</div>
               <div className="viewmodes">gridview listview</div>
             </div>
-            <ProductsGrid items={items} className=" products" />
+            <ProductsGrid items={items} />
           </section>
         </div>
       </Page>

@@ -36,9 +36,9 @@ $products-grid: (
 // Styles from components
 @import '../components/Header/styles.scss';
 @import '../components/Navigation/styles.scss';
-@import '../components/Pages/ProductPage.scss';
-@import '../components/Pages/ShopPage.scss';
-@import '../components/Pages/HomePage.scss';
+@import '../Pages/ProductPage.scss';
+@import '../Pages/ShopPage.scss';
+@import '../Pages/HomePage.scss';
 @import '../components/Products/ProductsGrid.scss';
 @import '../components/Products/ProductsItem.scss';
 // @import '../components/Navigation/ShopSidebar.scss';
@@ -81,7 +81,7 @@ footer {
   @include grid-column(1, $custom-grid--thirds);
 }
 
-.overmenu {
+.burgerMenu {
   visibility: hidden;
   position: absolute;
   top: 0;
@@ -120,10 +120,9 @@ footer {
   transition: opacity 300ms ease-in;
 }
 
-.fade-wrapper {
-  max-width: 90%;
-  margin: 1rem auto;
-  padding: 2rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
+.fade-routes__wrapper {
+  // max-width: 90%;
+  // margin: 1rem auto;
+  // padding: 2rem;
+  // border: 1px solid black;
 }
