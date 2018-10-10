@@ -41,7 +41,6 @@ export default class App extends Component {
   };
   render() {
     const { loading, products, error } = this.state;
-    console.log(products);
     return (
       <Router>
         <div className="app">
